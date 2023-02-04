@@ -1,0 +1,27 @@
+{% extends 'aws/base.html' %}
+{% block content %}
+<!-- Header-->
+<header class="bg-primary bg-gradient text-white">
+    <div class="container px-4 text-center">
+        <h1 class="fw-bolder">Welcome to Solution Cloud!</h1>
+        <p class="lead">A functional Bootstrap 5 boilerplate for one page scrolling websites</p>
+    </div>
+</header>
+<!--Start of About section-->
+<section id="about">
+    <div class="container px-4">
+        <div class="row gx-4 justify-content-center">
+            <h2>You have been logged out</h2>
+            <div class = "border-top pt-3">
+                <small class = "text-muted">
+                    <a href = "{% url 'logout' %}">Login</a>	
+                </small>	
+            </div>
+        </div>
+    </div>
+</section>
+ <!-- Contact section-->
+
+<!-- Contact section ends here -->
+
+{% endblock %}

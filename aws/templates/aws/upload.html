@@ -1,0 +1,23 @@
+{% extends 'aws/base.html' %}
+{% block content %}
+<!-- Header-->
+<header class="bg-primary bg-gradient text-white">
+    <div class="container px-4 text-center">
+        <h1 class="fw-bolder">Welcome to Scrolling Nav</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Upload</button>
+          </form>
+    </div>
+</header>
+   <!-- Services section-->
+   <section class="bg-light" id="services">
+    <div class="container px-4">
+        <div class="row gx-4 justify-content-center">
+            <div class="col-lg-8">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'aws/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<!-- Header-->
+<header class="bg-primary bg-gradient text-white">
+    <div class="container px-4 text-center">
+        <h1 class="fw-bolder">Welcome to Solution Cloud!</h1>
+        <p class="lead">A functional Bootstrap 5 boilerplate for one page scrolling websites</p>
+    </div>
+</header>
+   <!-- Services section-->
+<!--Start of About section-->
+<div class = "content-section">
+    <form method = "POST">
+        {% csrf_token %}	
+        <fieldset class = "form-group">
+            <legend class = "border-bottom mb-4">Login</legend>				
+            {{ form|crispy }}
+        </fieldset>
+        <div class = "form-group">
+            <button class = "btn btn-outline-info" type = "submit">Login</button>	
+        </div>
+    </form>
+</div>
+{% endblock %}
