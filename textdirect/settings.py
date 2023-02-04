@@ -12,11 +12,6 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
-SESSION=boto3.Session(aws_access_key_id='AKIAVDOG5YJU7BNVZZPL',
-aws_secret_access_key='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')
-
-#SESSION = env('SESSION')
-
 SECRET_KEY = env('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
