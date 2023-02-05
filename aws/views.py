@@ -119,5 +119,7 @@ def s3file_reader(request):
         df_base = pd.json_normalize(json_base)
         df_update = pd.json_normalize(json_update)
         #To perform comparasion, calculation logic based on df_base & df_update
-        #output_html = df.to_html()
-        #return HttpResponse(output_html)
+        print("Dataframe difference -- \n")
+        df = df_base.compare(df_update)
+        output_html = df.to_html()
+        return HttpResponse(output_html)
