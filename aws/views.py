@@ -22,11 +22,10 @@ s3_bucket =conf_settings.SESSION.resource('s3')
 
 
 def home(request):
-	context = {}
-	return render(request, 'aws/index.html', context)
+	return render(request, 'aws/index.html')
 
-def about(request):
-    return render(request, 'aws/aboutus.html', {})
+def contact(request):
+    return render(request, 'aws/contactus.html')
 
 @login_required    
 def s3_upload(request):
